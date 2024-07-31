@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodata Saya</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    *,
+    button,
+    a,
+    select,
+    textarea,
+    input,
+    form {
+      font-family: Quicksand, Arial;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-teal-50">
+  <nav class="fixed z-50 flex items-center justify-center w-full overflow-hidden rounded-b shadow-sm lg:justify-start lg:h-full lg:w-auto shadow-gray-300">
+    <ul class="flex items-center justify-center w-full py-1 text-center bg-teal-400 bg-opacity-80 lg:justify-start lg:flex-col lg:h-full text-emerald-950">
+      <li class="cursor-pointer select-none lg:mt-3 px-3 lg:px-4 flex justify-center items-center flex-col py-2 scale-[0.9] active:scale-[0.8] transition-all duration-150 ease-in-out">
+        <a href="#keahlian">
+          <i class="fa-solid fa-laptop-code leading-none lg:text-3xl text-[1.8rem] mb-1"></i>
+          <p class="text-xs font-semibold leading-none">Keahlian</p>
+        </a>
+      </li>
+      <li class="cursor-pointer select-none px-3 lg:px-4 flex justify-center items-center flex-col py-2 scale-[0.9] active:scale-[0.8] transition-all duration-150 ease-in-out">
+        <a href="#project">
+          <i class="fa-solid fa-layer-group leading-none lg:text-3xl text-[1.8rem] mb-1"></i>
+          <p class="text-xs font-semibold leading-none">project</p>
+        </a>
+      </li>
+      <li class="cursor-pointer select-none px-3 lg:px-4 flex justify-center items-center flex-col py-2 scale-[0.9] active:scale-[0.8] transition-all duration-150 ease-in-out">
+        <i class="fa-solid fa-address-card leading-none lg:text-3xl text-[1.8rem] mb-1"></i>
+        <p class="text-xs font-semibold leading-none">contact</p>
+      </li>
+    </ul>
+  </nav>
+  <main class="bg-teal-50 min-h-[200vh] lg:ps-[5.8rem] px-3 lg:pt-3 pt-20 pb-3 flex flex-col items-center gap-5">
+    <section id="keahlian" class="keahlian bg-teal-100 overflow-auto max-h-[100vh] shadow-gray-300 shadow rounded-2xl flex justify-center items-center lg:justify-start flex-wrap lg:gap-8 py-3 px-5 w-full">
+      <div class="w-[18rem] h-full flex justify-center items-center">
+        <header class="rounded-b-lg h-[20rem] w-[18rem] flex justify-center items-end overflow-hidden relative scale-[0.8]">
+          <div class="bg-teal-700 w-full h-[70%] absolute rounded-t-full rounded-b" style="filter: drop-shadow(0 0 1px rgba(0,0,0,0.8));"></div>
+          <img src="footage/Adit.png" alt="Adit" class="absolute object-cover w-full -top-4" style="filter: drop-shadow(0 0 1px rgba(0,0,0,0.5));">
+        </header>
+      </div>
+      <div class="basis-[30rem]">
+        <h1 class="text-center md:text-start text-lg font-bold underline underline-offset-[5px] mb-2">Keahlian</h1>
+        <p class="mb-2 text-sm">Saya adalah seorang full stack developer, rata-rata project yang telah saya kerjakan adalah website statis, hampir sepenuhnya dirancang di sisi front-end.</p>
+        <p class="mb-2 text-sm">Saya juga mampu menangani project website dinamis yang berintegrasi dengan database seperti <b>MYSQL dan SQLite</b>.</p>
+        <p class="mb-2 text-sm">Kemampuan saya dalam mengelola website di kedua bidang front-end dan back-end sekaligus, menjadikan saya seorang <b>Full-Stack Developer</b> yang bisa diandalkan.</p>
+      </div>
+    </section>
+    <section id="project" class="project bg-teal-100 overflow-auto max-h-[100vh] shadow-gray-300 shadow rounded-2xl flex justify-center items-center lg:justify-end flex-wrap py-3 px-5 w-full">
+      <div class="flex items-center justify-center w-full h-full">
+        <header class="rounded-b-lg h-[20rem] w-[18rem] flex justify-center items-end overflow-hidden relative scale-[0.8]">
+          <div class="bg-teal-700 w-full h-[70%] absolute rounded-t-full rounded-b" style="filter: drop-shadow(0 0 1px rgba(0,0,0,0.8));"></div>
+          <img src="footage/Adit.png" alt="Adit" class="absolute object-cover w-full -top-4" style="filter: drop-shadow(0 0 1px rgba(0,0,0,0.5));">
+        </header>
+      </div>
+      <div class="basis-[30rem] flex-grow self-start pb-5">
+        <h1 class="text-center text-lg font-bold underline underline-offset-[5px] mb-3">Project</h1>
+        <div class="flex flex-wrap items-center justify-center gap-3 gambar">
+          <div class="w-[18rem] aspect-video rounded-md overflow-hidden shadow-gray-300 shadow">
+            <a href="footage/dashboard-inventory-poliban.jpg" target="_blank">
+              <img src="footage/dashboard-inventory-poliban.jpg" alt="dashboard-inventory-poliban" class="object-cover w-full h-full">
+            </a>
+          </div>
+          <div class="w-[18rem] aspect-video rounded-md overflow-hidden shadow-gray-300 shadow">
+            <a href="footage/mrincredible.jpg" target="_blank">
+              <img src="footage/mrincredible.jpg" alt="mrincredible" class="object-cover w-full h-full img-fluid">
+            </a>
+          </div>
+          <div class="w-[18rem] aspect-video rounded-md overflow-hidden shadow-gray-300 shadow">
+            <a href="footage/mrincredible.jpg" target="_blank">
+              <img src="footage/mrincredible.jpg" alt="mrincredible" class="object-cover w-full h-full">
+            </a>
+          </div>
+          <div class="w-[18rem] aspect-video rounded-md overflow-hidden shadow-gray-300 shadow">
+            <a href="footage/mrincredible.jpg" target="_blank">
+              <img src="footage/mrincredible.jpg" alt="mrincredible" class="object-cover w-full h-full">
+            </a>
+          </div>
+          <div class="w-[18rem] aspect-video rounded-md overflow-hidden shadow-gray-300 shadow">
+            <a href="footage/mrincredible.jpg" target="_blank">
+              <img src="footage/mrincredible.jpg" alt="mrincredible" class="object-cover w-full h-full">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+
+</html>
