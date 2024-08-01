@@ -25,12 +25,35 @@
     html {
       scroll-behavior: smooth;
     }
+
+    .animate-fadeIn {
+      top: 20rem;
+      transition: all 2s ease-out;
+    }
+
+    .animate-fadeIn-visible {
+      top: -1rem;
+    }
+
+    .animate-spin-back {
+      animation: spin-back 0.5s linear infinite;
+    }
+
+    @keyframes spin-back {
+      from {
+        rotate: 0deg;
+      }
+
+      to {
+        rotate: -360deg;
+      }
+    }
   </style>
 </head>
 
 <body class="bg-teal-50">
   <nav class="fixed z-50 flex items-center justify-center w-full overflow-hidden rounded-b shadow-sm lg:justify-start lg:h-full lg:w-auto shadow-gray-300">
-    <ul class="flex items-center justify-center w-full py-1 text-center bg-teal-400 bg-opacity-80 lg:justify-start lg:flex-col lg:h-full text-emerald-950">
+    <ul class="flex items-center justify-center w-full py-1 text-center bg-cyan-500 bg-opacity-60 lg:justify-start lg:flex-col lg:h-full text-emerald-950">
       <li class="cursor-pointer select-none lg:mt-3 px-3 lg:px-4 flex justify-center items-center flex-col py-2 scale-[0.9] active:scale-[0.8] transition-all duration-150 ease-in-out">
         <a href="#keahlian">
           <i class="fa-solid fa-laptop-code leading-none lg:text-3xl text-[1.8rem] mb-1"></i>
@@ -38,72 +61,111 @@
         </a>
       </li>
       <li class="cursor-pointer select-none px-3 lg:px-4 flex justify-center items-center flex-col py-2 scale-[0.9] active:scale-[0.8] transition-all duration-150 ease-in-out">
-        <a href="#project">
+        <a href="#projek">
           <i class="fa-solid fa-layer-group leading-none lg:text-3xl text-[1.8rem] mb-1"></i>
-          <p class="text-xs font-semibold leading-none">project</p>
+          <p class="text-xs font-semibold leading-none">Projek</p>
         </a>
       </li>
       <li class="cursor-pointer select-none px-3 lg:px-4 flex justify-center items-center flex-col py-2 scale-[0.9] active:scale-[0.8] transition-all duration-150 ease-in-out">
-        <i class="fa-solid fa-address-card leading-none lg:text-3xl text-[1.8rem] mb-1"></i>
-        <p class="text-xs font-semibold leading-none">contact</p>
+        <a href="#kontak">
+          <i class="fa-solid fa-address-card leading-none lg:text-3xl text-[1.8rem] mb-1"></i>
+          <p class="text-xs font-semibold leading-none">Kontak</p>
+        </a>
       </li>
     </ul>
   </nav>
-  <main class="bg-teal-50 min-h-[200vh] lg:ps-[5.8rem] px-3 lg:pt-3 pt-20 pb-3 flex flex-col items-center gap-5">
-    <section id="keahlian" class="keahlian bg-teal-100 overflow-auto max-h-[100vh] shadow-gray-300 shadow rounded-2xl flex justify-center items-center lg:justify-start flex-wrap lg:gap-8 py-3 px-5 w-full">
-      <div class="w-[18rem] h-full flex justify-center items-center">
-        <header class="rounded-b-lg h-[20rem] w-[18rem] flex justify-center items-end overflow-hidden relative scale-[0.8]">
+  <main class="bg-teal-50 min-h-[150vh] lg:ps-[5.8rem] px-3 lg:pt-3 pt-20 pb-3 flex flex-col items-center gap-5">
+
+    <!-- <KEAHLIAN> -->
+    <section id="keahlian" class="keahlian text-white bg-gradient-to-b lg:bg-gradient-to-r from-teal-400 from-80% to-teal-300 overflow-auto max-h-[100vh] shadow-gray-300 shadow rounded-2xl flex justify-center items-center lg:justify-start flex-wrap lg:gap-8 py-3 px-5 w-full">
+      <header class="w-[18rem] h-full flex justify-center items-center">
+        <div class="rounded-b-lg h-[20rem] w-[18rem] flex justify-center items-end overflow-hidden relative scale-[0.8]">
           <div class="bg-teal-700 w-full h-[70%] absolute rounded-t-full rounded-b" style="filter: drop-shadow(0 0 1px rgba(0,0,0,0.8));"></div>
-          <img src="footage/Adit.png" alt="Adit" class="absolute object-cover w-full -top-4" style="filter: drop-shadow(0 0 1px rgba(0,0,0,0.5));">
-        </header>
-      </div>
-      <div class="basis-[30rem]">
+          <img src="footage/Another_Adit.png" alt="Another_Adit" class="absolute object-cover w-full pointer-events-none select-none animate-fadeIn" style="filter: drop-shadow(0 0 1px rgba(0,0,0,0.5));">
+        </div>
+      </header>
+      <div class="basis-[30rem] lg:border-l-[1.5px] lg:border-l-white lg:ps-3">
         <h1 class="text-center md:text-start text-lg font-bold underline underline-offset-[5px] mb-2">Keahlian</h1>
-        <p class="mb-2 text-sm">Saya adalah seorang full stack developer, rata-rata project yang telah saya kerjakan adalah website statis, hampir sepenuhnya dirancang di sisi front-end.</p>
+        <p class="mb-2 text-sm">Nama saya <b>Haidir Aditya</b>, rata-rata project yang saya kerjakan adalah website statis, hampir sepenuhnya dirancang di sisi front-end.</p>
         <p class="mb-2 text-sm">Saya juga mampu menangani project website dinamis yang berintegrasi dengan database seperti <b>MYSQL dan SQLite</b>.</p>
         <p class="mb-2 text-sm">Kemampuan saya dalam mengelola website di kedua bidang front-end dan back-end sekaligus, menjadikan saya seorang <b>Full-Stack Developer</b> yang bisa diandalkan.</p>
       </div>
     </section>
-    <section id="project" class="project bg-teal-100 overflow-auto max-h-[100vh] shadow-gray-300 shadow rounded-2xl flex justify-center items-center lg:justify-end flex-wrap py-3 px-5 w-full">
-      <div class="flex items-center justify-center w-full h-full">
-        <header class="rounded-b-lg h-[20rem] w-[18rem] flex justify-center items-end overflow-hidden relative scale-[0.8]">
-          <div class="bg-teal-700 w-full h-[70%] absolute rounded-t-full rounded-b" style="filter: drop-shadow(0 0 1px rgba(0,0,0,0.8));"></div>
-          <img src="footage/Adit.png" alt="Adit" class="absolute object-cover w-full -top-4" style="filter: drop-shadow(0 0 1px rgba(0,0,0,0.5));">
-        </header>
-      </div>
+    <!-- </KEAHLIAN> -->
+
+    <!-- <PROJEK> -->
+    <section id="projek" class="projek text-white bg-gradient-to-b from-green-400 from-30% to-green-300 overflow-auto max-h-[100vh] shadow-gray-300 shadow rounded-2xl flex justify-center items-center flex-wrap py-3 px-5 w-full">
+
+      <header class="flex items-center justify-center w-full h-full">
+        <div class="rounded-b-lg h-[15rem] w-[15rem] flex justify-center items-end overflow-hidden relative scale-[0.8] drop-shadow-sm">
+          <div class="absolute w-full h-full rounded-full bg-emerald-100"></div>
+          <img src="footage/memberi-laiks.png" alt="memberi-laiks" class="absolute object-cover w-full pointer-events-none select-none" style="filter: drop-shadow(0 0 1px rgba(0,0,0,0.5));">
+        </div>
+      </header>
       <div class="basis-[30rem] flex-grow self-start pb-5">
-        <h1 class="text-center text-lg font-bold underline underline-offset-[5px] mb-3">Project</h1>
+        <h1 class="text-center text-lg font-bold underline underline-offset-[5px] mb-3">Projek</h1>
         <div class="flex flex-wrap items-center justify-center gap-3 gambar">
-          <div class="w-[18rem] aspect-video rounded-md overflow-hidden shadow-gray-300 shadow">
-            <a href="footage/dashboard-inventory-poliban.jpg" target="_blank">
+          <div class="poltek w-[18rem] aspect-video rounded-md overflow-hidden shadow-gray-300 shadow">
+            <button class="relative w-full h-full overflow-hidden peer group">
               <img src="footage/dashboard-inventory-poliban.jpg" alt="dashboard-inventory-poliban" class="object-cover w-full h-full">
-            </a>
+              <div class="absolute w-full py-1 text-xs font-bold text-green-200 transition-all duration-200 ease-in-out bg-black -bottom-32 group-hover:bottom-0 bg-opacity-60">Inventory Poliban</div>
+            </button>
+            <div class="sidebar flex justify-center items-center flex-col w-[90%] aspect-video rounded-md sha shadow-[0_0_500px_500px_rgba(0,0,0,0.8)] fixed right-[-80%] top-0 opacity-0 peer-focus:opacity-100 peer-focus:right-[50%] peer-focus:top-[50%] peer-focus:translate-x-[50%] peer-focus:translate-y-[-50%] transition-all duration-300 ease-in-out z-[51]">
+              <img src="footage/dashboard-inventory-poliban.jpg" alt="dashboard-inventory-poliban" class="z-0 object-cover w-full h-full">
+              <span class="absolute z-10 text-xs font-bold text-white -bottom-6 lg:text-base text-opacity-70">tekan foto sekali lagi untuk menutupnya.</span>
+            </div>
           </div>
-          <div class="w-[18rem] aspect-video rounded-md overflow-hidden shadow-gray-300 shadow">
-            <a href="footage/mrincredible.jpg" target="_blank">
-              <img src="footage/mrincredible.jpg" alt="mrincredible" class="object-cover w-full h-full img-fluid">
-            </a>
+          <div class="pt-oka w-[18rem] aspect-video rounded-md overflow-hidden shadow-gray-300 shadow">
+            <button class="relative w-full h-full overflow-hidden peer group">
+              <img src="footage/PT-OKA.jpg" alt="PT-OKA" class="object-cover w-full h-full">
+              <div class="absolute w-full py-1 text-xs font-bold text-green-200 transition-all duration-200 ease-in-out bg-black -bottom-32 group-hover:bottom-0 bg-opacity-60">PT OKA</div>
+            </button>
+            <div class="sidebar flex justify-center items-center flex-col w-[90%] aspect-video rounded-md sha shadow-[0_0_500px_500px_rgba(0,0,0,0.8)] fixed right-[-80%] top-0 opacity-0 peer-focus:opacity-100 peer-focus:right-[50%] peer-focus:top-[50%] peer-focus:translate-x-[50%] peer-focus:translate-y-[-50%] transition-all duration-300 ease-in-out z-[51]">
+              <img src="footage/PT-OKA.jpg" alt="PT-OKA" class="z-0 object-cover w-full h-full">
+              <span class="absolute z-10 text-xs font-bold text-white -bottom-6 lg:text-base text-opacity-70">tekan foto sekali lagi untuk menutupnya.</span>
+            </div>
           </div>
-          <div class="w-[18rem] aspect-video rounded-md overflow-hidden shadow-gray-300 shadow">
-            <a href="footage/mrincredible.jpg" target="_blank">
-              <img src="footage/mrincredible.jpg" alt="mrincredible" class="object-cover w-full h-full">
-            </a>
-          </div>
-          <div class="w-[18rem] aspect-video rounded-md overflow-hidden shadow-gray-300 shadow">
-            <a href="footage/mrincredible.jpg" target="_blank">
-              <img src="footage/mrincredible.jpg" alt="mrincredible" class="object-cover w-full h-full">
-            </a>
-          </div>
-          <div class="w-[18rem] aspect-video rounded-md overflow-hidden shadow-gray-300 shadow">
-            <a href="footage/mrincredible.jpg" target="_blank">
-              <img src="footage/mrincredible.jpg" alt="mrincredible" class="object-cover w-full h-full">
-            </a>
+          <div class="dit-quran w-[18rem] aspect-video rounded-md overflow-hidden shadow-gray-300 shadow">
+            <button class="relative w-full h-full overflow-hidden peer group">
+              <img src="footage/dit-quran.jpg" alt="dit-quran" class="object-cover w-full h-full">
+              <div class="absolute w-full py-1 text-xs font-bold text-green-200 transition-all duration-200 ease-in-out bg-black -bottom-32 group-hover:bottom-0 bg-opacity-60">DIT Qur'an</div>
+            </button>
+            <div class="sidebar flex justify-center items-center flex-col w-[90%] aspect-video rounded-md sha shadow-[0_0_500px_500px_rgba(0,0,0,0.8)] fixed right-[-80%] top-0 opacity-0 peer-focus:opacity-100 peer-focus:right-[50%] peer-focus:top-[50%] peer-focus:translate-x-[50%] peer-focus:translate-y-[-50%] transition-all duration-300 ease-in-out z-[51]">
+              <img src="footage/dit-quran.jpg" alt="dit-quran" class="z-0 object-cover w-full h-full">
+              <span class="absolute z-10 text-xs font-bold text-white -bottom-6 lg:text-base text-opacity-70">tekan foto sekali lagi untuk menutupnya.</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- </PROJEK> -->
+
+    <!-- <KONTAK> -->
+    <section id="kontak" class="kontak text-white bg-gradient-to-b lg:bg-gradient-to-l from-emerald-400 from-80% to-emerald-300 overflow-auto max-h-[100vh] shadow-gray-300 shadow rounded-2xl flex justify-center items-center lg:justify-end flex-wrap lg:gap-8 py-3 px-5 w-full">
+      <header class="flex items-center justify-center w-[18rem] h-full lg:order-2">
+        <div class="rounded-b-lg h-[20rem] w-[18rem] flex justify-center items-end overflow-hidden relative scale-[0.8]">
+          <div class="bg-emerald-700 w-full h-[70%] absolute rounded-t-full rounded-b" style="filter: drop-shadow(0 0 1px rgba(0,0,0,0.8));"></div>
+          <img src="footage/Adit.png" alt="Adit" class="absolute object-cover w-full pointer-events-none select-none animate-fadeIn" style="filter: drop-shadow(0 0 1px rgba(0,0,0,0.5));">
+        </div>
+      </header>
+      <div class="basis-[30rem] lg:border-r-[1.5px] lg:border-r-white lg:pe-3">
+        <h1 class="text-center md:text-end text-lg font-bold underline underline-offset-[5px] mb-2">Kontak</h1>
+        <p class="mb-3 text-sm text-end">Ini adalah beberapa media sosial yang saya gunakan, <b>selalu aktif</b> menerima pesan dan panggilan <b>setiap saat</b>.</p>
+        <div class="flex items-center justify-end gap-3 text-white">
+          <button onclick="window.open('https://www.tiktok.com/@adeeetttt19', '_blank')" class="tiktok hover:scale-105 hover:text-yellow-200 transition-all duration-200 ease-in-out drop-shadow w-[3rem] h-[3rem] flex justify-center items-center text-center bg-emerald-700 rounded-full"><i class="drop-shadow-sm text-[1.7rem] fa-brands fa-tiktok"></i></button>
+          <button onclick="window.open('https://web.facebook.com/haidir.aditya.18/', '_blank')" class="facebook hover:scale-105 hover:text-yellow-200 transition-all duration-200 ease-in-out drop-shadow w-[3rem] h-[3rem] flex justify-center items-center text-center bg-emerald-700 rounded-full"><i class="drop-shadow-sm text-[1.7rem] fa-brands fa-facebook-f"></i></button>
+          <button onclick="window.open('https://www.instagram.com/adyd.dd/', '_blank')" class="instagram hover:scale-105 hover:text-yellow-200 transition-all duration-200 ease-in-out drop-shadow w-[3rem] h-[3rem] flex justify-center items-center text-center bg-emerald-700 rounded-full"><i class="drop-shadow-sm text-[1.7rem] fa-brands fa-instagram"></i></button>
+          <button onclick="window.open('https://www.twitter.com/AdeeetttA', '_blank')" class="twitter-x hover:scale-105 hover:text-yellow-200 transition-all duration-200 ease-in-out drop-shadow w-[3rem] h-[3rem] flex justify-center items-center text-center bg-emerald-700 rounded-full"><i class="drop-shadow-sm text-[1.7rem] fa-brands fa-x-twitter"></i></button>
+        </div>
+        <br>
+        <br>
+      </div>
+    </section>
+    <!-- </KONTAK> -->
+
   </main>
 
+  <script src="script.js"></script>
 </body>
 
 </html>
